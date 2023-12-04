@@ -9,14 +9,8 @@ public class Card implements Comparable<Card> {
         this.country = c;
     }
 
-    public String getValue() {
-        if (this.value == 11) return "J";
-        if (this.value == 12) return "Q";
-        if (this.value == 13) return "K";
-        if (this.value == 14) return "A";
-
-
-        return String.valueOf(value);
+    public int getValue() {
+        return this.value;
     }
 
     public void setValue(int value) {
@@ -32,6 +26,11 @@ public class Card implements Comparable<Card> {
     }
 
     public String toString () {
+        if (this.value == 11) return this.country + " J";
+        if (this.value == 12) return this.country + " Q";
+        if (this.value == 13) return this.country + " K";
+        if (this.value == 14) return this.country + " A";
+
         return this.country + " " + this.getValue();
     }
 
@@ -41,4 +40,6 @@ public class Card implements Comparable<Card> {
                 .thenComparing(Card::getCountry)
                 .compare(this, o);
     }
+
+
 }
