@@ -34,6 +34,10 @@ public class HelloApplication extends Application {
         Text text2 = new Text();
         Text text3 = new Text();
 
+        text1.setText("Kirjaimia: 0");
+        text2.setText("Sanoja: 0");
+        text3.setText("Pisin sana on: ");
+
         HBox hBox = new HBox();
         hBox.setSpacing(20);
         hBox.getChildren().addAll(text1,text2, text3);
